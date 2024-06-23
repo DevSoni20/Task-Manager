@@ -32,7 +32,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
   return (
       <footer style={footerStyle}>
-          <p>Designed by Dev Soni, Ajay Mishra and Agam Bajaj</p>
+          <p>Designed by Dev Soni</p>
       </footer>
   );
 }
