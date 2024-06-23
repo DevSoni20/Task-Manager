@@ -30,9 +30,9 @@ function TaskForm() {
     const task = { title, description, dueDate };
     try {
       if (id) {
-        await axios.put(`http://localhost:8000/tasks/${id}`, task);
+        await axios.put(`https://task-manager-full-stack-tau.vercel.app/tasks/${id}`, task);
       } else {
-        await axios.post('http://localhost:8000/tasks', task);
+        await axios.post('https://task-manager-full-stack-tau.vercel.app/tasks', task);
       }
       navigate('/');
     } catch (error) {
