@@ -13,7 +13,7 @@ function TaskForm() {
     if (id) {
       const fetchTask = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/tasks/${id}`);
+          const response = await axios.get(`https://task-manager-hys.vercel.app/tasks/${id}`);
           setTitle(response.data.title);
           setDescription(response.data.description);
           setDueDate(response.data.dueDate);
@@ -30,9 +30,15 @@ function TaskForm() {
     const task = { title, description, dueDate };
     try {
       if (id) {
+<<<<<<< HEAD
         await axios.put(`https://task-manager-full-stack-tau.vercel.app/tasks/${id}`, task);
       } else {
         await axios.post('https://task-manager-full-stack-tau.vercel.app/tasks', task);
+=======
+        await axios.put(`https://task-manager-hys.vercel.app/tasks/${id}`, task);
+      } else {
+        await axios.post('https://task-manager-hys.vercel.app/tasks', task);
+>>>>>>> 8dac8fff33f1aef3618035e4cd2ac2768e3016f9
       }
       navigate('/');
     } catch (error) {
