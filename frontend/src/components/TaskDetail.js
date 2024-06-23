@@ -10,11 +10,7 @@ function TaskDetail() {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-<<<<<<< HEAD
-        const response = await axios.get(`https://task-manager-full-stack-tau.vercel.app/tasks/${id}`);
-=======
-        const response = await axios.get(`https://task-manager-hys.vercel.app/tasks/${id}`);
->>>>>>> 8dac8fff33f1aef3618035e4cd2ac2768e3016f9
+    const response = await axios.get(`https://task-manager-full-stack-tau.vercel.app/tasks/${id}`);
         setTask(response.data);
       } catch (error) {
         console.error('Error fetching task:', error);
@@ -25,12 +21,7 @@ function TaskDetail() {
 
   const deleteTask = async () => {
     try {
-<<<<<<< HEAD
       await axios.delete(`https://task-manager-full-stack-tau.vercel.app/tasks/${id}`);
-=======
-      await axios.delete(`https://task-manager-hys.vercel.app/tasks/${id}`);
->>>>>>> 8dac8fff33f1aef3618035e4cd2ac2768e3016f9
-      navigate('/');
     } catch (error) {
       console.error('Error deleting task:', error);
     }
